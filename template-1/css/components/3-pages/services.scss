@@ -1,0 +1,247 @@
+.services {
+  width: calc(100% - 80px);
+  max-width: 1783px;
+  margin: 0 auto 80px;
+  background-color: #f5f5f5;
+  border-radius: 50px;
+  padding: 100px 10px;
+  &.base {
+    width: 100%;
+    max-width: unset;
+    margin: 0;
+    background-color: transparent;
+    padding: 180px 0;
+    border-radius: unset;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &Content {
+    width: calc(50% - 15px);
+    max-width: 710px;
+    &__title {
+      margin-bottom: 40px;
+      p {
+        max-width: 680px;
+      }
+    }
+    &__list {
+      max-width: 666px;
+    }
+    h2 {
+      margin-bottom: 10px;
+    }
+  }
+  &Image {
+    width: calc(50% - 15px);
+    max-width: 680px;
+    border-radius: 30px;
+    overflow: hidden;
+    &__inner {
+      padding-bottom: 98%;
+      position: relative;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+      }
+    }
+  }
+  &Item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 100px;
+    padding: 22px 65px 22px 45px;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid var(--main);
+    color: var(--main);
+    margin-bottom: 32px;
+    &:last-child {
+      margin: 0;
+    }
+    &:hover {
+      opacity: 1;
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+    h5 {
+      display: flex;
+      align-items: center;
+      b {
+        margin-right: 40px;
+        font-weight: 400;
+      }
+    }
+    span {
+      position: absolute;
+      top: 50%;
+      right: 35px;
+      transform: translateY(-50%);
+      width: 25px;
+      height: 22px;
+      display: flex;
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+// 1600px
+@mixin services-xxxxxlg-xxxxxxlg {
+  .services {
+    padding: 60px 10px;
+    border-radius: 40px;
+    &.base {
+      padding: 150px 0;
+    }
+    &Content {
+      &__title {
+        margin-bottom: 30px;
+      }
+    }
+    &Item {
+      padding: 18px 60px 18px 35px;
+      span {
+        right: 25px;
+        width: 22px;
+        height: 20px;
+      }
+      h5 {
+        b {
+          margin-right: 25px;
+        }
+      }
+    }
+  }
+}
+// 1380px
+@mixin services-xxxlg-xxxxlg {
+  .services {
+    padding: 50px 0;
+    border-radius: 30px;
+    &.base {
+      padding: 120px 0;
+    }
+    &Content {
+      &__title {
+        margin-bottom: 22px;
+      }
+    }
+    &Item {
+      padding: 16px 50px 16px 25px;
+      margin-bottom: 22px;
+      span {
+        right: 20px;
+        width: 18px;
+        height: 16px;
+      }
+      h5 {
+        b {
+          margin-right: 25px;
+        }
+      }
+    }
+  }
+}
+// 1180px
+@mixin services-xlg-xxlg {
+  .services {
+    width: calc(100% - 60px);
+    border-radius: 25px;
+    margin-bottom: 60px;
+    padding: 40px 0;
+    &.base {
+      padding: 90px 0;
+    }
+    &Item {
+      padding: 12px 40px 12px 20px;
+      margin-bottom: 18px;
+      span {
+        right: 20px;
+        width: 18px;
+        height: 16px;
+      }
+      h5 {
+        b {
+          margin-right: 16px;
+        }
+      }
+    }
+  }
+}
+// 930px
+@mixin services-md-lg {
+  .services {
+    &.base {
+      padding: 70px 0;
+    }
+    &__inner {
+      flex-direction: column;
+    }
+    &Image {
+      width: 100%;
+      max-width: unset;
+      order: -1;
+      margin-bottom: 30px;
+      border-radius: 22px;
+      &__inner {
+        padding-bottom: 70%;
+      }
+    }
+    &Content {
+      width: 100%;
+      max-width: unset;
+    }
+  }
+}
+// 750px
+@mixin services-sm-md {
+  .services {
+    width: calc(100% - 40px);
+    border-radius: 20px;
+    margin-bottom: 40px;
+    &.base {
+      padding: 60px 0;
+    }
+  }
+}
+// 540px
+@mixin services-xsm-sm {
+  .services {
+    width: 100%;
+    border-radius: unset;
+    padding: 40px 0;
+    margin-bottom: 0;
+    &.base {
+      padding: 40px 0;
+    }
+    &Image {
+      border-radius: 16px;
+      margin-bottom: 24px;
+      &__inner {
+        padding-bottom: 98%;
+      }
+    }
+    &Item {
+      padding: 12px 35px 12px 16px;
+      margin-bottom: 14px;
+      border-width: 1px;
+      span {
+        right: 16px;
+        width: 16px;
+        height: 14px;
+      }
+      h5 {
+        b {
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+}

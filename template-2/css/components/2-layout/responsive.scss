@@ -1,0 +1,405 @@
+// 1600px
+@include xxxxxlg-xxxxxxlg {
+  h1 {
+    font-size: 90px;
+    &.sm {
+      font-size: 60px;
+    }
+  }
+  h2 {
+    font-size: 60px;
+  }
+  h4 {
+    font-size: 30px;
+  }
+  h5 {
+    font-size: 25px;
+  }
+  p {
+    &.big {
+      font-size: 22px;
+    }
+    &.ex {
+      font-size: 20px;
+    }
+  }
+  body {
+    font-size: 18px;
+    line-height: 175%;
+  }
+  .button {
+    padding: 13px 24px;
+    min-width: 240px;
+  }
+  .main {
+    padding-top: 114px;
+  }
+  @include header-xxxxxlg-xxxxxxlg;
+  @include nav-xxxxxlg-xxxxxxlg;
+  @include hero-xxxxxlg-xxxxxxlg;
+  @include about-xxxxxlg-xxxxxxlg;
+  @include services-xxxxxlg-xxxxxxlg;
+  @include info-xxxxxlg-xxxxxxlg;
+  @include faq-xxxxxlg-xxxxxxlg;
+  @include product-xxxxxlg-xxxxxxlg;
+  @include newsletter-xxxxxlg-xxxxxxlg;
+  @include offer-xxxxxlg-xxxxxxlg;
+  @include policy-xxxxxlg-xxxxxxlg;
+  @include boutique-xxxxxlg-xxxxxxlg;
+  @include basket-xxxxxlg-xxxxxxlg;
+  @include footer-xxxxxlg-xxxxxxlg;
+}
+// 1450px
+@include xxxxlg-xxxxxlg {
+  h1 {
+    font-size: 80px;
+  }
+  // @include hero-xxxxlg-xxxxxlg;
+}
+// 1380px
+@include xxxlg-xxxxlg {
+  h1 {
+    font-size: 70px;
+    &.sm {
+      font-size: 50px;
+    }
+  }
+  h2 {
+    font-size: 50px;
+  }
+  h3 {
+    font-size: 35px;
+  }
+  h4 {
+    font-size: 25px;
+  }
+  h5 {
+    font-size: 22px;
+  }
+  p {
+    &.big {
+      font-size: 20px;
+    }
+    &.ex {
+      font-size: 18px;
+    }
+  }
+  .button {
+    font-size: 18px;
+    padding: 10px 20px;
+    min-width: 200px;
+    &.primary {
+      padding: 13px 20px;
+    }
+    &.secondary {
+      padding: 13px 20px;
+    }
+    &.base {
+      padding: 2px 10px;
+    }
+  }
+  .social {
+    a {
+      width: 20px;
+      height: 20px;
+      margin-right: 16px;
+      &.big {
+        width: 24px;
+        height: 24px;
+      }
+      &.sm {
+        width: 12px;
+      }
+    }
+  }
+  .input {
+    input,
+    textarea {
+      font-size: 18px;
+    }
+  }
+  .main {
+    padding-top: 104px;
+  }
+  @include header-xxxlg-xxxxlg;
+  @include nav-xxxlg-xxxxlg;
+  @include hero-xxxlg-xxxxlg;
+  @include about-xxxlg-xxxxlg;
+  @include realisation-xxxlg-xxxxlg;
+  @include services-xxxlg-xxxxlg;
+  @include contact-xxxlg-xxxxlg;
+  @include application-xxxlg-xxxxlg;
+  @include intro-xxxlg-xxxxlg;
+  @include info-xxxlg-xxxxlg;
+  @include faq-xxxlg-xxxxlg;
+  @include policy-xxxlg-xxxxlg;
+  @include boutique-xxxlg-xxxxlg;
+  @include product-xxxlg-xxxxlg;
+  @include newsletter-xxxlg-xxxxlg;
+  @include offer-xxxlg-xxxxlg;
+  @include basket-xxxlg-xxxxlg;
+  @include footer-xxxlg-xxxxlg;
+}
+// 1250px
+@include xlg-xxlg-extra {
+  h1 {
+    font-size: 60px;
+    &.sm {
+      font-size: 45px;
+    }
+  }
+  h2 {
+    font-size: 45px;
+  }
+  @include hero-xlg-xxlg-extra;
+}
+// 1180px
+@include xlg-xxlg {
+  .auto__container {
+    padding: 0 30px;
+  }
+  h1 {
+    font-size: 55px;
+    &.sm {
+      font-size: 40px;
+    }
+  }
+  h2 {
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  h5 {
+    font-size: 20px;
+  }
+  h6 {
+    font-size: 20px;
+  }
+  p {
+    &.big {
+      font-size: 18px;
+    }
+    &.ex {
+      font-size: 16px;
+    }
+  }
+  body {
+    font-size: 16px;
+  }
+  .button {
+    font-size: 16px;
+    padding: 10px 20px;
+    min-width: 180px;
+
+    &.base {
+      span {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+  .input {
+    input,
+    textarea {
+      font-size: 16px;
+      padding: 16px 0;
+    }
+  }
+  .spin {
+    &__title {
+      p {
+        font-size: 20px;
+        margin-bottom: 12px;
+      }
+    }
+    &__box {
+      width: 150px;
+      padding: 6px 10px;
+      border-radius: 27px;
+      button {
+        width: 30px;
+        height: 30px;
+        font-size: 22px;
+      }
+      input {
+        padding: 6px 50px;
+        font-size: 22px;
+      }
+    }
+  }
+  @include header-xlg-xxlg;
+  @include nav-xlg-xxlg;
+  @include hero-xlg-xxlg;
+  @include about-xlg-xxlg;
+  @include services-xlg-xxlg;
+  @include application-xlg-xxlg;
+  @include intro-xlg-xxlg;
+  @include info-xlg-xxlg;
+  @include faq-xlg-xxlg;
+  @include policy-xlg-xxlg;
+  @include boutique-xlg-xxlg;
+  @include product-xlg-xxlg;
+  @include basket-xlg-xxlg;
+  @include newsletter-xlg-xxlg;
+  @include realisation-xlg-xxlg;
+  @include offer-xlg-xxlg;
+  @include footer-xlg-xxlg;
+}
+// 1024px
+@include lg-xlg {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  h1 {
+    font-size: 50px;
+  }
+  .main {
+    padding-top: 88px;
+  }
+  @include header-lg-xlg;
+  @include nav-lg-xlg;
+  @include hero-lg-xlg;
+}
+// 930px
+@include md-lg {
+  h1 {
+    font-size: 45px;
+    &.sm {
+      font-size: 35px;
+    }
+  }
+  h2 {
+    font-size: 35px;
+  }
+  h3 {
+    font-size: 25px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  p {
+    &.big {
+      font-size: 16px;
+    }
+  }
+
+  @include hero-md-lg;
+  @include about-md-lg;
+  @include realisation-md-lg;
+  @include services-md-lg;
+  @include contact-md-lg;
+  @include application-md-lg;
+  @include intro-md-lg;
+  @include info-md-lg;
+  @include faq-md-lg;
+  @include policy-md-lg;
+  @include boutique-md-lg;
+  @include product-md-lg;
+  @include basket-md-lg;
+  @include newsletter-md-lg;
+  @include offer-md-lg;
+  @include footer-md-lg;
+}
+// 750px
+@include sm-md {
+  .auto__container {
+    padding: 0 20px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  .main {
+    padding-top: 84px;
+  }
+  @include nav-sm-md;
+  @include hero-sm-md;
+  @include services-sm-md;
+  @include info-sm-md;
+  @include faq-sm-md;
+  @include boutique-sm-md;
+  @include product-sm-md;
+  @include basket-sm-md;
+  @include about-sm-md;
+  @include realisation-sm-md;
+}
+// 650px
+@include sm-md-extra {
+  @include hero-sm-md-extra;
+}
+// 540px
+@include xsm-sm {
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 14px;
+  }
+  h5 {
+    font-size: 16px;
+  }
+  p {
+    &.big {
+      font-size: 14px;
+    }
+    &.ex {
+      font-size: 14px;
+    }
+  }
+  body {
+    font-size: 14px;
+  }
+  .main {
+    padding-top: 75px;
+  }
+  .spin {
+    &__title {
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+  @include header-xsm-sm;
+  @include nav-xsm-sm;
+  @include hero-xsm-sm;
+  @include about-xsm-sm;
+  @include realisation-xsm-sm;
+  @include services-xsm-sm;
+  @include contact-xsm-sm;
+  @include application-xsm-sm;
+  @include intro-xsm-sm;
+  @include info-xsm-sm;
+  @include faq-xsm-sm;
+  @include policy-xsm-sm;
+  @include boutique-xsm-sm;
+  @include product-xsm-sm;
+  @include basket-xsm-sm;
+  @include newsletter-xsm-sm;
+  @include offer-xsm-sm;
+  @include footer-xsm-sm;
+}
+// 440px
+@include xxsm-xsm {
+  h1 {
+    font-size: 37px;
+  }
+  @include hero-xxsm-xsm;
+}
+// 390px
+@include xxxsm-xxsm {
+  p {
+    &.big {
+      font-size: 13px;
+    }
+  }
+  // @include hero-xxxsm-xxsm;
+}

@@ -1,0 +1,503 @@
+.hero {
+  position: relative;
+  color: var(--white);
+  .auto__container {
+    max-width: 1710px;
+  }
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      background: linear-gradient(
+        180deg,
+        #000000 0.45%,
+        rgba(0, 0, 0, 0) 33.76%
+      );
+
+      opacity: 0.51;
+    }
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      background: linear-gradient(
+        65.86deg,
+        #000000 16.43%,
+        rgba(0, 0, 0, 0) 106.16%
+      );
+    }
+    img {
+      @include fullImage;
+    }
+  }
+  &__inner {
+    min-height: 100vh;
+    padding: 200px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &-content {
+      max-width: 730px;
+      p {
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+    }
+    &-buttons {
+      display: flex;
+      align-items: center;
+    }
+    h1 {
+      margin-bottom: 50px;
+    }
+    .button {
+      margin-right: 15px;
+      position: relative;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
+// 1600px
+@mixin hero-xxxxxlg-xxxxxxlg {
+  .hero {
+  }
+}
+// 1450px
+@mixin hero-xxxxlg-xxxxxlg {
+  .hero {
+  }
+}
+// 1380px
+@mixin hero-xxxlg-xxxxlg {
+  .hero {
+  }
+}
+// 1250px
+@mixin hero-xlg-xxlg-extra {
+  .hero {
+  }
+}
+// 1180px
+@mixin hero-xlg-xxlg {
+  .hero {
+    &__inner {
+      padding: 170px 0;
+      h1 {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+// 1024px
+@mixin hero-lg-xlg {
+  .hero {
+  }
+}
+// 930px
+@mixin hero-md-lg {
+  .hero {
+    &__inner {
+      padding: 140px 0;
+    }
+  }
+}
+// 750px
+@mixin hero-sm-md {
+  .hero {
+  }
+}
+// 650px
+@mixin hero-sm-md-extra {
+  .hero {
+  }
+}
+// 540px
+@mixin hero-xsm-sm {
+  .hero {
+    &__bg {
+      &::before {
+        background: #000000;
+        opacity: 0.6;
+      }
+      &::after {
+        display: none;
+      }
+    }
+    &__inner {
+      padding: 100px 0;
+      &-content {
+        text-align: center;
+      }
+      &-buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        .button {
+          width: 100%;
+          max-width: 210px;
+          margin: 0 0 20px 0;
+        }
+      }
+      h1 {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+// 440px
+@mixin hero-xxsm-xsm {
+  .hero {
+  }
+}
+.application {
+  color: var(--white);
+  margin-bottom: -1px;
+  padding: 200px 0 80px;
+  &.base {
+    padding: 130px 0 260px;
+    margin: 0;
+    .auto__container {
+      max-width: 1600px;
+    }
+    .application {
+      &Content {
+        max-width: 560px;
+      }
+    }
+  }
+  .auto__container {
+    max-width: 1760px;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &Form {
+    background-color: #111111;
+    padding: 40px 45px 25px;
+    width: calc(56% - 25px);
+    max-width: 830px;
+    &__row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &__foot {
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 34px;
+    }
+    .button {
+      color: var(--white);
+    }
+    .input {
+      width: calc(50% - 10px);
+      max-width: 352px;
+      margin-bottom: 10px;
+      &:last-child {
+        margin: 0;
+      }
+      &.big {
+        width: 100%;
+        max-width: unset;
+      }
+    }
+  }
+  &Content {
+    width: calc(44% - 25px);
+    max-width: 670px;
+    &__title {
+      max-width: 560px;
+      margin-bottom: 35px;
+      p {
+        color: var(--gray);
+      }
+    }
+    &__links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 40px;
+      a {
+        display: flex;
+        align-items: center;
+        font-weight: 300;
+        color: var(--white);
+        margin-bottom: 16px;
+        &:hover {
+          opacity: 1;
+          color: var(--primary);
+        }
+        &:last-child {
+          margin: 0;
+        }
+        span {
+          width: 25px;
+          height: 25px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 10px;
+          &.sm {
+            transform: translateY(-3px);
+            svg {
+              width: 100%;
+              height: 120%;
+            }
+          }
+          &.med {
+            svg {
+              width: 88%;
+              height: 88%;
+            }
+          }
+          svg {
+            width: 96%;
+            height: 68%;
+          }
+        }
+      }
+    }
+    h2 {
+      color: var(--white);
+      margin-bottom: 5px;
+    }
+  }
+}
+// 1600px
+@mixin application-xxxxxlg-xxxxxxlg {
+  .application {
+    &.base {
+      padding: 100px 0 200px;
+    }
+  }
+}
+// 1380px
+@mixin application-xxxlg-xxxxlg {
+  .application {
+    padding: 150px 0 70px;
+    &.base {
+      padding: 80px 0 150px;
+    }
+    &Form {
+      width: calc(55% - 20px);
+    }
+    &Content {
+      width: calc(45% - 20px);
+    }
+  }
+}
+// 1180px
+@mixin application-xlg-xxlg {
+  .application {
+    padding: 100px 0 60px;
+    &.base {
+      padding: 70px 0 100px;
+    }
+    &Form {
+      width: calc(55% - 15px);
+      padding: 35px 24px;
+    }
+    &Content {
+      width: calc(45% - 15px);
+    }
+  }
+}
+// 930px
+@mixin application-md-lg {
+  .application {
+    padding: 70px 0 40px;
+    &.base {
+      padding: 70px 0;
+    }
+    &__inner {
+      flex-direction: column;
+    }
+    &Form {
+      width: 100%;
+      max-width: unset;
+      padding: 35px 24px;
+      margin-bottom: 35px;
+    }
+    &Content {
+      width: 100%;
+      max-width: unset !important;
+    }
+  }
+}
+// 540px
+@mixin application-xsm-sm {
+  .application {
+    padding: 40px 0 20px;
+    &.base {
+      padding: 40px 0;
+    }
+    &Form {
+      margin-bottom: 24px;
+      padding: 24px 20px 30px;
+      &__foot {
+        padding-top: 28px;
+      }
+      .input {
+        width: 100%;
+        margin-bottom: 6px;
+      }
+      .button {
+        width: 100%;
+        max-width: 210px;
+        margin: 0 auto;
+      }
+    }
+    &Content {
+      &__title {
+        margin-bottom: 22px;
+      }
+      &__links {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+.newsletter {
+  padding: 90px 0 100px;
+  background-color: var(--primary);
+  color: var(--white);
+  .auto__container {
+    max-width: 1150px;
+  }
+  &__inner {
+    &-title {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    h2 {
+      margin-bottom: 12px;
+    }
+  }
+  &Form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__input {
+      width: calc(100% - 300px);
+      max-width: 750px;
+      display: flex;
+      input {
+        width: 100%;
+        font-size: 18px;
+        line-height: 100%;
+        font-weight: 400;
+        font-family: var(--main-font);
+        color: var(--black);
+        text-transform: uppercase;
+        background-color: rgba(#e3e3e3, 0.78);
+        border-radius: 4px;
+        padding: 16px 25px;
+        &::placeholder {
+          color: var(--black);
+        }
+      }
+    }
+    .button {
+      &:hover {
+        background-color: var(--white);
+        color: var(--primary);
+      }
+    }
+  }
+}
+// 1600px
+@mixin newsletter-xxxxxlg-xxxxxxlg {
+  .newsletter {
+    &Form {
+      &__input {
+        width: calc(100% - 260px);
+        max-width: 800px;
+      }
+    }
+  }
+}
+// 1380px
+@mixin newsletter-xxxlg-xxxxlg {
+  .newsletter {
+    .auto__container {
+      max-width: 1020px;
+    }
+    &Form {
+      &__input {
+        width: calc(100% - 230px);
+      }
+    }
+  }
+}
+// 1180px
+@mixin newsletter-xlg-xxlg {
+  .newsletter {
+    padding: 70px 0;
+    &Form {
+      &__input {
+        width: calc(100% - 200px);
+        input {
+          font-size: 16px;
+          padding: 14px 24px;
+        }
+      }
+    }
+  }
+}
+// 930px
+@mixin newsletter-md-lg {
+  .newsletter {
+    padding: 50px 0;
+    &__inner {
+      &-title {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
+// 540px
+@mixin newsletter-xsm-sm {
+  .newsletter {
+    padding: 40px 0;
+    &__inner {
+      &-title {
+        margin-bottom: 20px;
+      }
+      h2 {
+        margin-bottom: 5px;
+      }
+    }
+    &Form {
+      flex-direction: column;
+      align-items: center;
+      &__input {
+        width: 100%;
+        margin-bottom: 20px;
+        input {
+          padding: 14px 20px;
+        }
+      }
+      .button {
+        width: 100%;
+        max-width: 210px;
+      }
+    }
+  }
+}

@@ -1,0 +1,192 @@
+.boutique {
+  padding: 120px 0 165px;
+  color: var(--white);
+  .auto__container {
+    max-width: 1910px;
+  }
+  &__inner {
+    &-title {
+      text-align: center;
+      max-width: 924px;
+      margin: 0 auto 70px;
+    }
+    &-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -14px;
+    }
+    &-foot {
+      display: flex;
+      justify-content: center;
+      padding-top: 50px;
+    }
+    h2 {
+      margin-bottom: 30px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+  &Item {
+    width: calc(25% - 28px);
+    margin: 50px 14px;
+    &:hover {
+      opacity: 1;
+      img {
+        transform: scale(1.1);
+      }
+    }
+    &__image {
+      width: 100%;
+      padding-bottom: 130%;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 25px;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+        transition: 0.3s ease;
+      }
+    }
+    &__content {
+      padding: 25px 0;
+      border-top: 2px solid var(--primary);
+      h5 {
+        font-weight: 300;
+        color: var(--primary);
+      }
+      h4 {
+        margin-bottom: 10px;
+        font-weight: 300;
+        color: var(--white);
+      }
+    }
+  }
+}
+// 1600px
+@mixin boutique-xxxxxlg-xxxxxxlg {
+  .boutique {
+    padding: 100px 0 130px;
+  }
+}
+// 1380px
+@mixin boutique-xxxlg-xxxxlg {
+  .boutique {
+    padding: 90px 0 100px;
+    &__inner {
+      &-title {
+        margin-bottom: 50px;
+      }
+      &-row {
+        margin: 0 -8px;
+      }
+      &-foot {
+        padding-top: 40px;
+      }
+    }
+    &Item {
+      margin: 30px 8px;
+      width: calc(25% - 16px);
+    }
+  }
+}
+// 1180px
+@mixin boutique-xlg-xxlg {
+  .boutique {
+    padding: 70px 0 80px;
+    &__inner {
+      &-title {
+        margin-bottom: 40px;
+      }
+      &-row {
+        margin: 0 -10px;
+      }
+    }
+    &Item {
+      width: calc(33.3% - 20px);
+      margin: 20px 10px;
+      &__content {
+        padding: 20px 0;
+      }
+    }
+  }
+}
+// 930px
+@mixin boutique-md-lg {
+  .boutique {
+    padding: 60px 0;
+    &__inner {
+      &-title {
+        margin-bottom: 35px;
+      }
+      &-row {
+        margin: 0 -8px;
+      }
+      &-foot {
+        padding-top: 35px;
+      }
+      h2 {
+        margin-bottom: 20px;
+      }
+    }
+    &Item {
+      width: calc(33.3% - 16px);
+      margin: 12px 8px;
+      border-radius: 20px;
+      &__content {
+        padding: 16px 0;
+      }
+    }
+  }
+}
+// 750px
+@mixin boutique-sm-md {
+  .boutique {
+    &Item {
+      width: calc(50% - 16px);
+    }
+  }
+}
+// 540px
+@mixin boutique-xsm-sm {
+  .boutique {
+    padding: 40px 0;
+    &__inner {
+      &-title {
+        margin-bottom: 30px;
+      }
+      &-row {
+        flex-direction: column;
+        margin: 0;
+      }
+      &-foot {
+        padding-top: 30px;
+        .button {
+          width: 100%;
+          max-width: 210px;
+        }
+      }
+    }
+    &Item {
+      width: 100%;
+      margin: 0 0 20px 0;
+      &:last-child {
+        margin: 0;
+      }
+      &__image {
+        margin-bottom: 20px;
+      }
+      &__content {
+        border-width: 1px;
+      }
+      h4 {
+        font-size: 25px;
+      }
+      h5 {
+        font-size: 22px;
+      }
+    }
+  }
+}

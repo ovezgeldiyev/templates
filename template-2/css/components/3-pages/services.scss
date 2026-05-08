@@ -1,0 +1,480 @@
+.services {
+  padding: 250px 0;
+  &.sm {
+    padding-top: 100px;
+  }
+  .auto__container {
+    max-width: 1920px;
+    padding: 0;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &Content {
+    width: calc(50% - 25px);
+    max-width: 867px;
+    padding-left: 40px;
+    &__inner {
+      max-width: 680px;
+      margin: 0 0 0 auto;
+    }
+    &__title {
+      margin-bottom: 40px;
+      p {
+        max-width: 680px;
+      }
+    }
+    &__list {
+      max-width: 666px;
+    }
+    h2 {
+      margin-bottom: 10px;
+    }
+  }
+  &Image {
+    width: calc(50% - 25px);
+    max-width: 867px;
+    &__inner {
+      padding-bottom: 67%;
+      position: relative;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+      }
+    }
+  }
+  &Item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 28px 35px 28px 5px;
+    position: relative;
+    cursor: pointer;
+    border-bottom: 2px solid #535353;
+    color: var(--white);
+    &:last-child {
+      border: unset;
+    }
+    &:hover {
+      opacity: 1;
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+    h5 {
+      display: flex;
+      align-items: center;
+      b {
+        margin-right: 40px;
+        font-weight: 400;
+        color: var(--gray);
+      }
+    }
+    span {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 25px;
+      height: 22px;
+      display: flex;
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+// 1600px
+@mixin services-xxxxxlg-xxxxxxlg {
+  .services {
+    padding: 200px 0;
+    &.sm {
+      padding-top: 80px;
+    }
+    &Content {
+      &__title {
+        margin-bottom: 30px;
+      }
+    }
+    &Item {
+      span {
+        width: 22px;
+        height: 20px;
+      }
+      h5 {
+        b {
+          margin-right: 25px;
+        }
+      }
+    }
+  }
+}
+// 1380px
+@mixin services-xxxlg-xxxxlg {
+  .services {
+    padding: 150px 0;
+    &.sm {
+      padding-top: 60px;
+    }
+    &Content {
+      &__title {
+        margin-bottom: 22px;
+      }
+    }
+    &Item {
+      span {
+        width: 18px;
+        height: 16px;
+      }
+      h5 {
+        b {
+          margin-right: 25px;
+        }
+      }
+    }
+  }
+}
+// 1180px
+@mixin services-xlg-xxlg {
+  .services {
+    padding: 100px 0;
+    &.sm {
+      padding-top: 40px;
+    }
+    &Content {
+      width: calc(50% - 15px);
+      padding-left: 30px;
+    }
+    &Image {
+      width: calc(50% - 15px);
+    }
+    &Item {
+      padding: 22px 35px 22px 5px;
+      span {
+        width: 18px;
+        height: 16px;
+      }
+      h5 {
+        b {
+          margin-right: 16px;
+        }
+      }
+    }
+  }
+}
+// 930px
+@mixin services-md-lg {
+  .services {
+    padding: 80px 0;
+    &__inner {
+      flex-direction: column;
+    }
+    &Image {
+      width: 100%;
+      max-width: unset;
+      order: -1;
+      margin-bottom: 30px;
+    }
+    &Content {
+      width: 100%;
+      max-width: unset;
+      padding: 0 30px;
+      &__inner {
+        max-width: unset;
+      }
+      &__list {
+        max-width: unset;
+      }
+    }
+  }
+}
+// 750px
+@mixin services-sm-md {
+  .services {
+    padding: 60px 0;
+    &Content {
+      padding: 0 20px;
+    }
+  }
+}
+// 540px
+@mixin services-xsm-sm {
+  .services {
+    padding: 30px 0 30px;
+    &.sm {
+      padding-top: 20px;
+    }
+    &Image {
+      margin-bottom: 24px;
+    }
+    &Content {
+      &__title {
+        margin-bottom: 16px;
+      }
+    }
+    &Item {
+      border-width: 1px;
+      padding: 20px 25px 20px 0;
+      span {
+        width: 16px;
+        height: 14px;
+      }
+      h5 {
+        b {
+          margin-right: 14px;
+        }
+      }
+    }
+  }
+}
+.offer {
+  position: relative;
+  padding: 80px 0 190px;
+  color: var(--white);
+  &.sm {
+    padding-bottom: 115px;
+  }
+  .auto__container {
+    max-width: 1400px;
+  }
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 520px;
+    display: flex;
+    pointer-events: none;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      background: linear-gradient(
+        180deg,
+        #000000 0.18%,
+        rgba(0, 0, 0, 0) 56.28%
+      );
+      opacity: 0.51;
+    }
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      background: linear-gradient(
+        65.86deg,
+        #000000 16.43%,
+        rgba(0, 0, 0, 0) 106.16%
+      );
+    }
+    img {
+      opacity: 0.6;
+      @include fullImage;
+    }
+  }
+  &__inner {
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1270px;
+      margin: 0 auto 90px;
+    }
+    &-title {
+      width: calc(50% - 15px);
+      max-width: 546px;
+    }
+    &-text {
+      width: calc(50% - 15px);
+      max-width: 558px;
+    }
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 -11px;
+    }
+    h2 {
+      margin-bottom: 16px;
+    }
+  }
+  &Item {
+    width: calc(33.3% - 22px);
+    margin: 0 11px;
+    position: relative;
+    &:hover {
+      opacity: 1;
+      &::before {
+        opacity: 0.6;
+      }
+      .offerItem {
+        &__content {
+          opacity: 1;
+        }
+      }
+      img {
+        transform: scale(1.1);
+      }
+    }
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      background-color: var(--black);
+      opacity: 0;
+      transition: 0.3s ease;
+      z-index: 1;
+    }
+    &__inner {
+      width: 100%;
+      padding-bottom: 133%;
+      position: relative;
+      overflow: hidden;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+        transition: 0.3s ease;
+      }
+    }
+    &__content {
+      padding: 20px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 100%;
+      text-align: center;
+      z-index: 2;
+      opacity: 0;
+      transition: 0.3s ease;
+    }
+    h5 {
+      font-weight: 300;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+  }
+}
+// 1600px
+@mixin offer-xxxxxlg-xxxxxxlg {
+  .offer {
+    padding: 80px 0 160px;
+    &__bg {
+      height: 490px;
+    }
+    &__inner {
+      &-top {
+        margin-bottom: 70px;
+      }
+    }
+  }
+}
+// 1380px
+@mixin offer-xxxlg-xxxxlg {
+  .offer {
+    padding: 70px 0 130px;
+  }
+}
+// 1180px
+@mixin offer-xlg-xxlg {
+  .offer {
+    padding: 70px 0 100px;
+    &.sm {
+      padding-bottom: 100px;
+    }
+    &__inner {
+      &-top {
+        margin-bottom: 55px;
+      }
+      &-title {
+        width: calc(45% - 15px);
+      }
+      &-text {
+        width: calc(55% - 15px);
+      }
+    }
+  }
+}
+// 930px
+@mixin offer-md-lg {
+  .offer {
+    padding: 60px 0;
+    &.sm {
+      padding-bottom: 60px;
+    }
+    &__bg {
+      height: 70%;
+    }
+    &__inner {
+      &-top {
+        flex-direction: column;
+        margin-bottom: 40px;
+        position: relative;
+        padding-bottom: 60px;
+        .button {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      }
+      &-title {
+        width: 100%;
+        max-width: unset;
+        margin-bottom: 20px;
+        h2 {
+          margin: 0;
+        }
+      }
+      &-text {
+        width: 100%;
+        max-width: unset;
+      }
+      &-row {
+        margin: 0 -6px;
+      }
+    }
+    &Item {
+      margin: 0 6px;
+      width: calc(33.3% - 12px);
+    }
+  }
+}
+// 540px
+@mixin offer-xsm-sm {
+  .offer {
+    padding: 40px 0;
+    &__bg {
+      height: 65%;
+    }
+    &.sm {
+      padding-bottom: 40px;
+    }
+    &__inner {
+      .button {
+        width: 100%;
+        max-width: 210px;
+      }
+    }
+    &Item {
+      width: calc(50% - 12px);
+      &:last-child {
+        display: none;
+      }
+      &__content {
+        padding: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,138 @@
+.product {
+  padding: 122px 0 190px;
+  .auto__container {
+    max-width: 1430px;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &Image {
+    width: calc(55% - 25px);
+    max-width: 668px;
+    border-radius: 30px;
+    overflow: hidden;
+    &__inner {
+      padding-bottom: 112%;
+      position: relative;
+      height: 100%;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+      }
+    }
+  }
+  &Content {
+    width: calc(45% - 25px);
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    &__title {
+      margin-bottom: 20px;
+      p {
+        color: var(--main);
+      }
+    }
+    &__text {
+      max-width: 516px;
+    }
+    h2 {
+      margin-bottom: 22px;
+    }
+    .button {
+      margin-bottom: 22px;
+    }
+    .spin {
+      margin-bottom: 22px;
+    }
+  }
+}
+// 1600px
+@mixin product-xxxxxlg-xxxxxxlg {
+  .product {
+    padding: 100px 0 150px;
+  }
+}
+// 1380px
+@mixin product-xxxlg-xxxxlg {
+  .product {
+    padding: 80px 0 120px;
+    &Image {
+      width: calc(55% - 20px);
+    }
+    &Content {
+      width: calc(45% - 20px);
+    }
+  }
+}
+// 1180px
+@mixin product-xlg-xxlg {
+  .product {
+    padding: 70px 0 100px;
+    &Image {
+      width: calc(55% - 15px);
+    }
+    &Content {
+      width: calc(45% - 15px);
+    }
+  }
+}
+// 930px
+@mixin product-md-lg {
+  .product {
+    padding: 60px 0 80px;
+    &__inner {
+      align-items: flex-start;
+    }
+    &Image {
+      width: calc(55% - 10px);
+      border-radius: 24px;
+    }
+    &Content {
+      width: calc(45% - 10px);
+      h2 {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+// 750px
+@mixin product-sm-md {
+  .product {
+    padding: 50px 0 60px;
+    &__inner {
+      flex-direction: column;
+    }
+    &Image {
+      width: 100%;
+      max-width: unset;
+      margin-bottom: 30px;
+      &__inner {
+        padding-bottom: 100%;
+      }
+    }
+    &Content {
+      width: 100%;
+      max-width: unset;
+      &__text {
+        max-width: unset;
+      }
+      h2 {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+// 540px
+@mixin product-xsm-sm {
+  .product {
+    padding: 40px 0;
+    &Image{ 
+      border-radius: 16px;
+    }
+  }
+}
