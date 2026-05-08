@@ -1,0 +1,206 @@
+.boutique {
+  padding: 105px 0 122px;
+  position: relative;
+  .auto__container {
+    max-width: 1800px;
+  }
+  &__line {
+    position: absolute;
+    width: 127%;
+    max-width: 2200px;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    align-items: flex-start;
+    pointer-events: none;
+    img {
+      width: 100%;
+    }
+  }
+  &__inner {
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1430px;
+      margin: 0 auto 100px;
+    }
+    &-side {
+      width: calc(55% - 15px);
+      max-width: 700px;
+    }
+    &-text {
+      width: calc(45% - 15px);
+      max-width: 575px;
+    }
+    &-title {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    &-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -13px;
+    }
+    &-foot {
+      display: flex;
+      justify-content: center;
+      padding-top: 40px;
+    }
+  }
+  &Item {
+    width: calc(25% - 26px);
+    margin: 23px 13px;
+    border-radius: 50px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    &:hover {
+      opacity: 1;
+      img {
+        transform: scale(1.1);
+      }
+    }
+    &__image {
+      width: 100%;
+      padding-bottom: 126%;
+      position: relative;
+      overflow: hidden;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+        transition: 0.3s ease;
+      }
+    }
+    &__content {
+      padding: 30px 40px;
+      h5 {
+        margin-bottom: 10px;
+        color: var(--main);
+      }
+      p {
+        color: var(--gray);
+      }
+    }
+  }
+}
+// 1380px
+@mixin boutique-xxxlg-xxxxlg {
+  .boutique {
+    padding: 90px 0 100px;
+    &__inner {
+      &-top {
+        margin-bottom: 60px;
+      }
+      &-row {
+        margin: 0 -8px;
+      }
+    }
+    &Item {
+      margin: 12px 8px;
+      width: calc(25% - 16px);
+      border-radius: 40px;
+      &__content {
+        padding: 24px 30px;
+      }
+    }
+  }
+}
+// 1180px
+@mixin boutique-xlg-xxlg {
+  .boutique {
+    padding: 70px 0 80px;
+    &__inner {
+      &-top {
+        margin-bottom: 44px;
+      }
+      &-row {
+        margin: 0 -10px;
+      }
+    }
+    &Item {
+      width: calc(33.3% - 20px);
+      margin: 14px 10px;
+      border-radius: 30px;
+    }
+  }
+}
+// 930px
+@mixin boutique-md-lg {
+  .boutique {
+    padding: 60px 0;
+    &__inner {
+      &-top {
+        flex-direction: column;
+        margin-bottom: 35px;
+      }
+      &-side {
+        width: 100%;
+        max-width: unset;
+        margin-bottom: 24px;
+      }
+      &-text {
+        width: 100%;
+        max-width: unset;
+      }
+      &-row {
+        margin: 0 -8px;
+      }
+      &-foot {
+        padding-top: 35px;
+      }
+    }
+    &Item {
+      width: calc(33.3% - 16px);
+      margin: 12px 8px;
+      &__content {
+        padding: 15px 20px;
+      }
+    }
+  }
+}
+// 750px
+@mixin boutique-sm-md {
+  .boutique {
+    &Item {
+      width: calc(50% - 16px);
+      border-radius: 20px;
+    }
+  }
+}
+// 540px
+@mixin boutique-xsm-sm {
+  .boutique {
+    padding: 60px 0 50px;
+    &__inner {
+      &-top {
+        margin-bottom: 24px;
+      }
+      &-side {
+        margin-bottom: 16px;
+      }
+      &-row {
+        flex-direction: column;
+        margin: 0;
+      }
+    }
+    &Item {
+      width: 100%;
+      margin: 0 0 25px 0;
+      &:last-child {
+        margin: 0;
+      }
+      &__content {
+        padding: 20px;
+      }
+      h5 {
+        font-size: 23px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+}

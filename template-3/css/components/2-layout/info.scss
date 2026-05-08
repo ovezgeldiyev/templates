@@ -1,0 +1,258 @@
+.info {
+  &.last {
+    padding: 60px 0 180px;
+    .info {
+      &__inner {
+        margin: 0;
+      }
+    }
+  }
+  &Main {
+    background-color: #f1f1f1;
+    border-radius: 50px;
+    overflow: hidden;
+    &__image {
+      width: 100%;
+      padding-bottom: 20%;
+      position: relative;
+      min-height: 260px;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+      }
+    }
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      padding: 80px 0 165px;
+    }
+    &__content {
+      max-width: 1100px;
+      text-align: center;
+      margin: 0 auto;
+      h2 {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .auto__container {
+    max-width: 1400px;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -110px;
+  }
+  &Item {
+    width: calc(33.3% - 10px);
+    max-width: 424px;
+    border-radius: 50px;
+    padding: 60px 40px;
+    min-height: 277px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--white);
+    color: var(--gray);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.161);
+    transition: 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    &:hover {
+      opacity: 1;
+      background-color: var(--primary);
+      color: var(--white);
+      h5 {
+        color: var(--white);
+      }
+      span {
+        background-color: var(--white);
+        color: var(--primary);
+        &::before {
+          background-color: var(--white);
+        }
+      }
+    }
+    h5 {
+      color: var(--black);
+      margin-bottom: 16px;
+      transition: 0.3s ease;
+    }
+    p {
+      max-width: 315px;
+      line-height: 140%;
+    }
+    span {
+      width: 46px;
+      height: 46px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--primary);
+      border-radius: 50%;
+      color: var(--white);
+      position: absolute;
+      top: 22px;
+      right: 26px;
+      transition: 0.3s ease;
+      &::before {
+        position: absolute;
+        width: 126%;
+        height: 126%;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        content: "";
+        transform: translate(-50%, -50%);
+        background-color: var(--primary);
+        opacity: 0.5;
+        transition: 0.3s ease;
+      }
+      svg {
+        width: 23px;
+        height: 21px;
+        transform: rotate(-40deg);
+      }
+    }
+  }
+}
+// 1600px
+@mixin info-xxxxxlg-xxxxxxlg {
+  .info {
+    &.last {
+      padding: 60px 0 150px;
+    }
+  }
+}
+// 1380px
+@mixin info-xxxlg-xxxxlg {
+  .info {
+    &.last {
+      padding: 50px 0 120px;
+    }
+    &Main {
+      border-radius: 40px;
+      &__inner {
+        padding: 60px 0 140px;
+      }
+    }
+    &__inner {
+      margin-top: -80px;
+    }
+    &Item {
+      min-height: 240px;
+      padding: 40px 30px;
+      border-radius: 40px;
+    }
+  }
+}
+// 1180px
+@mixin info-xlg-xxlg {
+  .info {
+    &.last {
+      padding: 40px 0 80px;
+    }
+    &Main {
+      border-radius: 30px;
+      &__inner {
+        padding: 50px 0 100px;
+      }
+    }
+    &__inner {
+      margin-top: -60px;
+    }
+    &Item {
+      min-height: 180px;
+      padding: 40px 30px;
+      border-radius: 30px;
+      span {
+        top: 16px;
+        right: 16px;
+        width: 36px;
+        height: 36px;
+        svg {
+          width: 18px;
+          height: 16px;
+        }
+      }
+    }
+  }
+}
+// 930px
+@mixin info-md-lg {
+  .info {
+    &.last {
+      padding: 40px 0 60px;
+    }
+    &Item {
+      padding: 28px 20px;
+      min-height: 160px;
+    }
+  }
+}
+// 750px
+@mixin info-sm-md {
+  .info {
+    &__inner {
+      flex-direction: column;
+      margin-top: -50px;
+    }
+    &Main {
+      border-radius: 20px;
+      &__inner {
+        padding: 40px 0 80px;
+      }
+    }
+    &Item {
+      width: 100%;
+      max-width: unset;
+      min-height: 160px;
+      margin-bottom: 20px;
+      border-radius: 20px;
+      &:last-child {
+        margin: 0;
+      }
+      p {
+        max-width: unset;
+      }
+    }
+  }
+}
+// 540px
+@mixin info-xsm-sm {
+  .info {
+    background-color: #f1f1f1;
+    padding-bottom: 40px;
+    &.last {
+      padding: 20px 0 40px;
+      background-color: transparent;
+    }
+    &Main {
+      border-radius: 0;
+      &__image {
+        min-height: 230px;
+      }
+      &__content {
+        h2 {
+          margin-bottom: 14px;
+        }
+      }
+      &__inner {
+        padding: 40px 0 30px;
+      }
+    }
+    &__inner {
+      margin: 0;
+    }
+    &Item {
+      h5 {
+        font-size: 22px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+}

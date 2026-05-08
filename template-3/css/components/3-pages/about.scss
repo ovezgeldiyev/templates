@@ -1,0 +1,382 @@
+.about {
+  position: relative;
+  padding: 92px 0 260px;
+  &.big {
+    padding: 225px 0 343px;
+  }
+  .auto__container {
+    max-width: 1440px;
+  }
+  &__line {
+    position: absolute;
+    width: 127%;
+    max-width: 2200px;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    img {
+      width: 100%;
+    }
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  &Image {
+    width: calc(45% - 25px);
+    max-width: 530px;
+    border-radius: 50px;
+    overflow: hidden;
+    &__inner {
+      padding-bottom: 100%;
+      position: relative;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+      }
+    }
+  }
+  &Content {
+    width: calc(55% - 20px);
+    max-width: 700px;
+    h2 {
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 40px;
+    }
+  }
+}
+// 1600px
+@mixin about-xxxxxlg-xxxxxxlg {
+  .about {
+    padding: 80px 0 200px;
+    &.big {
+      padding: 180px 0 200px;
+    }
+  }
+}
+// 1380px
+@mixin about-xxxlg-xxxxlg {
+  .about {
+    padding: 70px 0 150px;
+    &.big {
+      padding: 150px 0;
+    }
+    &Image {
+      border-radius: 40px;
+    }
+  }
+}
+// 1180px
+@mixin about-xlg-xxlg {
+  .about {
+    padding: 70px 0 110px;
+    &.big {
+      padding: 110px 0;
+    }
+    &Image {
+      border-radius: 30px;
+      width: calc(45% - 15px);
+    }
+    &Content {
+      width: calc(55% - 15px);
+    }
+  }
+}
+// 930px
+@mixin about-md-lg {
+  .about {
+    padding: 60px 0 80px;
+    &.big {
+      padding: 80px 0;
+    }
+    &Image {
+      width: calc(45% - 12px);
+    }
+    &Content {
+      width: calc(55% - 12px);
+      h2 {
+        margin-bottom: 16px;
+      }
+      p {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
+// 750px
+@mixin about-sm-md {
+  .about {
+    padding: 50px 0 60px;
+    &.big {
+      padding: 60px 0;
+    }
+    &__inner {
+      flex-direction: column;
+    }
+    &Image {
+      width: 100%;
+      max-width: unset;
+      margin-bottom: 30px;
+      border-radius: 20px;
+      order: -1;
+    }
+    &Content {
+      width: 100%;
+      max-width: unset;
+    }
+  }
+}
+// 540px
+@mixin about-xsm-sm {
+  .about {
+    padding: 40px 0;
+    &.big {
+      padding: 60px 0 40px;
+    }
+    &__line {
+      width: 800px;
+      height: unset;
+      top: 40%;
+      transform: translateX(-50%);
+      align-items: flex-start;
+    }
+    &Image {
+      margin-bottom: 24px;
+    }
+    &Content {
+      p {
+        margin-bottom: 18px;
+      }
+      .button {
+        width: 100%;
+        max-width: 210px;
+      }
+    }
+  }
+}
+.story {
+  padding: 244px 0 100px;
+  position: relative;
+  .auto__container {
+    max-width: 1590px;
+  }
+  &.rev {
+    padding: 140px 0 270px;
+    .auto__container {
+      max-width: 1730px;
+    }
+    .story {
+      &Banner {
+        order: -1;
+        align-items: flex-end;
+      }
+      &Image {
+        &.sm {
+          margin: -32% auto 0 0;
+        }
+      }
+    }
+  }
+  &.big {
+    padding: 140px 0 90px;
+    .auto__container {
+      max-width: 1590px;
+    }
+  }
+  &__line {
+    position: absolute;
+    width: 150%;
+    max-width: 2430px;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+  }
+  &Content {
+    position: relative;
+    width: calc(50% - 15px);
+    max-width: 700px;
+    padding-top: 60px;
+    h2 {
+      margin-bottom: 16px;
+    }
+    p {
+      margin-bottom: 38px;
+    }
+  }
+  &Banner {
+    width: calc(50% - 15px);
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &Image {
+    width: 76%;
+    max-width: 530px;
+    border-radius: 50px;
+    overflow: hidden;
+    &.sm {
+      margin: -32% 0 0 auto;
+      width: 52%;
+      max-width: 360px;
+      border: 15px solid var(--white);
+      z-index: 2;
+    }
+    &__inner {
+      padding-bottom: 100%;
+      position: relative;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+      }
+    }
+  }
+}
+// 1600px
+@mixin story-xxxxxlg-xxxxxxlg {
+  .story {
+    padding: 200px 0 80px;
+    &.rev {
+      padding: 110px 0 200px;
+    }
+    &.big {
+      padding: 110px 0 80px;
+    }
+  }
+}
+// 1380px
+@mixin story-xxxlg-xxxxlg {
+  .story {
+    padding: 160px 0 70px;
+    &.rev {
+      padding: 80px 0 160px;
+    }
+    &.big {
+      padding: 80px 0 70px;
+    }
+    &Image {
+      border-radius: 40px;
+    }
+  }
+}
+// 1180px
+@mixin story-xlg-xxlg {
+  .story {
+    padding: 120px 0 60px;
+    &.rev {
+      padding: 60px 0 120px;
+    }
+    &.big {
+      padding: 60px 0;
+    }
+    &Image {
+      border-radius: 30px;
+      &.sm {
+        border-width: 12px;
+        border-radius: 40px;
+      }
+    }
+    &Content {
+      padding-top: 35px;
+    }
+  }
+}
+// 930px
+@mixin story-md-lg {
+  .story {
+    padding: 80px 0 40px;
+    &.rev {
+      padding: 40px 0 80px;
+    }
+    &.big {
+      padding: 40px 0;
+    }
+    &__inner {
+      align-items: center;
+    }
+    &Content {
+      padding-top: 0;
+      p {
+        margin-bottom: 24px;
+      }
+    }
+    &Image {
+      &.sm {
+        border-width: 8px;
+        border-radius: 35px;
+      }
+    }
+  }
+}
+// 750px
+@mixin story-sm-md {
+  .story {
+    padding: 60px 0 30px;
+    &.rev {
+      padding: 30px 0 60px;
+    }
+    &__inner {
+      flex-direction: column;
+    }
+    &Banner {
+      width: 100%;
+      max-width: unset;
+      order: -1;
+      margin-bottom: 24px;
+    }
+    &Image {
+      &.sm {
+        border-width: 12px;
+      }
+    }
+    &Content {
+      width: 100%;
+    }
+  }
+}
+// 540px
+@mixin story-xsm-sm {
+  .story {
+    padding: 40px 0 20px;
+    &.rev {
+      padding: 20px 0 40px;
+    }
+    &.big {
+      padding: 30px 0 10px;
+    }
+    &Image {
+      border-radius: 20px;
+      &.sm {
+        border-width: 7px;
+        border-radius: 25px;
+      }
+    }
+  }
+}

@@ -1,0 +1,242 @@
+.faq {
+  padding: 100px 0 260px;
+  &__inner {
+    &-title {
+      max-width: 575px;
+      margin: 0 auto 30px;
+      text-align: center;
+    }
+    &-col {
+      max-width: 890px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+    h2 {
+      margin-bottom: 16px;
+    }
+  }
+  &Item {
+    width: 100%;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    color: var(--main);
+    margin-bottom: 32px;
+    transition: 0.3s ease;
+    background-color: #f1f1f1;
+    &:last-child {
+      margin: 0;
+    }
+    &.active {
+      border-radius: 40px;
+      opacity: 1;
+      border-color: var(--primary);
+      color: var(--white);
+      background-color: var(--primary);
+      p {
+        color: var(--white);
+      }
+      span {
+        color: var(--primary);
+        background-color: var(--white);
+        &::before {
+          background-color: var(--white);
+        }
+      }
+    }
+    &:hover {
+      opacity: 1;
+      color: var(--white);
+      background-color: var(--primary);
+      p {
+        color: var(--white);
+      }
+      span {
+        color: var(--primary);
+        background-color: var(--white);
+        &::before {
+          background-color: var(--white);
+        }
+      }
+    }
+    &__head {
+      position: relative;
+      padding: 20px 20px 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &.active {
+        span {
+          transform: rotate(90deg);
+        }
+      }
+      h5 {
+        width: calc(100% - 50px);
+        display: flex;
+        align-items: center;
+      }
+      span {
+        width: 46px;
+        height: 46px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--primary);
+        border-radius: 50%;
+        color: var(--white);
+        transition: 0.3s ease;
+        position: relative;
+        &::before {
+          position: absolute;
+          width: 126%;
+          height: 126%;
+          border-radius: 50%;
+          top: 50%;
+          left: 50%;
+          content: "";
+          transform: translate(-50%, -50%);
+          background-color: var(--primary);
+          opacity: 0.5;
+          transition: 0.3s ease;
+        }
+        svg {
+          width: 25px;
+          height: 22px;
+        }
+      }
+    }
+    &__body {
+      max-height: 0;
+      opacity: 0;
+      transition: 0.3s ease;
+      overflow: hidden;
+      padding: 0 30px;
+      &.active {
+        opacity: 1;
+        max-height: 500px;
+        padding: 0 30px 24px;
+      }
+    }
+    p {
+      color: var(--gray);
+      transition: 0.3s ease;
+    }
+  }
+}
+// 1600px
+@mixin faq-xxxxxlg-xxxxxxlg {
+  .faq {
+    padding: 80px 0 200px;
+  }
+}
+// 1380px
+@mixin faq-xxxlg-xxxxlg {
+  .faq {
+    padding: 60px 0 150px;
+  }
+}
+// 1180px
+@mixin faq-xlg-xxlg {
+  .faq {
+    padding: 40px 0 100px;
+    &Item {
+      margin-bottom: 24px;
+      &.active {
+        border-radius: 30px;
+      }
+      &__head {
+        span {
+          width: 36px;
+          height: 36px;
+          svg {
+            width: 18px;
+            height: 16px;
+          }
+        }
+      }
+      h5 {
+        width: calc(100% - 44px);
+        font-size: 25px;
+      }
+    }
+  }
+}
+// 930px
+@mixin faq-md-lg {
+  .faq {
+    padding: 30px 0 80px;
+    &__inner {
+      &-col {
+        width: 100%;
+      }
+    }
+    &Item {
+      margin-bottom: 24px;
+      &.active {
+        border-radius: 30px;
+      }
+      &__head {
+        padding: 16px 16px 16px 25px;
+        h5 {
+          font-size: 20px;
+        }
+      }
+      &__body {
+        padding: 0 25px;
+        &.active {
+          padding: 0 25px 20px;
+        }
+      }
+    }
+  }
+}
+// 750px
+@mixin faq-sm-md {
+  .faq {
+    padding: 30px 0 60px;
+    &__inner {
+      &-title {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
+// 540px
+@mixin faq-xsm-sm {
+  .faq {
+    padding: 30px 0 50px;
+    &__inner {
+      &-title {
+        margin-bottom: 24px;
+      }
+    }
+    &Item {
+      margin-bottom: 16px;
+      &.active {
+        border-radius: 20px;
+      }
+      &__head {
+        padding: 12px 12px 12px 20px;
+        span {
+          width: 26px;
+          height: 26px;
+          svg {
+            width: 15px;
+            height: 13px;
+          }
+        }
+        h5 {
+          width: calc(100% - 36px);
+          font-size: 16px;
+        }
+      }
+      &__body {
+        padding: 0 20px;
+        &.active {
+          padding: 0 20px 20px;
+        }
+      }
+    }
+  }
+}

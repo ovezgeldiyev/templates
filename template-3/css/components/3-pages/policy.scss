@@ -1,0 +1,55 @@
+.policy {
+  padding: 120px 0 136px;
+  .auto__container {
+    max-width: 1500px;
+  }
+  &__inner {
+    &-title {
+      margin-bottom: 40px;
+    }
+    &-content {
+      p {
+        a {
+          color: var(--primary);
+        }
+        b {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+// 1380px
+@mixin policy-xxxlg-xxxxlg {
+  .policy {
+    padding: 100px 0;
+  }
+}
+// 1180px
+@mixin policy-xlg-xxlg {
+  .policy {
+    padding: 80px 0;
+  }
+}
+// 930px
+@mixin policy-md-lg {
+  .policy {
+    padding: 60px 0;
+    &__inner {
+      &-title {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+// 540px
+@mixin policy-xsm-sm {
+  .policy {
+    padding: 60px 0 40px;
+    &__inner {
+      &-title {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
